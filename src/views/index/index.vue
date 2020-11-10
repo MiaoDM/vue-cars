@@ -11,7 +11,7 @@
     <div id="children-view" :class="{open:show}">
       <router-view/>
     </div>
-
+    
   </div>
 </template>
 <script>
