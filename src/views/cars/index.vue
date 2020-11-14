@@ -1,52 +1,55 @@
 <template>
-  <div class="index-wrap">
-    <section class="cars-item">
-      <header>
-        <h4 class="cars-logo">
-          <img src="../../assets/cars-logo.png" alt="Mustang 2019款" />
-          <span class="name">Mustang 2019款</span>
-        </h4>
-        <p class="cars-attr">新能源汽车 5座</p>
-      </header>
-      <div class="cars-content">
-        <div class="info">
-          <div>
-            <h4 class="cars-number">粤 B745N8</h4>
-            <div>
-              <ul class="cars-power active-li-9">
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-                <li></li>
-              </ul>
-              <p class="distance">
-                <sub>约</sub>
-                <strong>600</strong>
-                <sub>KM</sub>
-              </p>
-            </div>
-          </div>
-        </div>
-        <img src="../../assets/images/pic001.jpg" alt="" />
-      </div>
-      <footer>
-        <a href="javascript:void(0);" class="parking-link">某某停车场</a>
-      </footer>
-    </section>
-    <span @click="user">汽车列表</span>
+  <div class="cars-wrap">
+    <div class="cars-swiper-wrap">
+      <swiper class="swiper" :options="swiperOption">
+        <swiper-slide>
+          <CarsItem height="820px"/>
+        </swiper-slide>
+        <swiper-slide>
+          <CarsItem />
+        </swiper-slide>
+        <swiper-slide>
+          <CarsItem />
+        </swiper-slide>
+        <swiper-slide>
+          <CarsItem />
+        </swiper-slide>
+        <swiper-slide>
+          <CarsItem />
+        </swiper-slide>
+        <swiper-slide>
+          <CarsItem />
+        </swiper-slide>
+      </swiper>
+      <div class="swiper-button-next" slot="button-next"></div>
+      <div class="swiper-button-prev" slot="button-prev"></div>
+    </div>
+<!--    <span @click="user">汽车列表</span>-->
   </div>
 </template>
 <script>
+import CarsItem from "@c/carsList";
+import { Swiper, SwiperSlide } from "vue-awesome-swiper";
+import "swiper/swiper-bundle.css";
+
 export default {
   name: "Cars",
+  components: {
+    Swiper,
+    SwiperSlide,
+    CarsItem
+  },
   data() {
-    return {};
+    return {
+      swiperOption: {
+        slidesPerView: 3,
+        spaceBetween: 50,
+        navigation: {
+          nextEl: '.swiper-button-next',
+          prevEl: '.swiper-button-prev'
+        }
+      }
+    };
   },
   methods: {
     user() {

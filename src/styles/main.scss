@@ -1,28 +1,40 @@
 @import "sassConfig.scss";
 @import "./normalize.scss";
+@import "./icon.scss";
 
-i[class^=icon] {
+/*float*/
+.pull-right{float: right;}
+.pull-left{float: left;}
+
+/*font-size*/
+.fs-24{font-size: 24px;}
+
+/*clearfix*/
+.clearfix{@extend %clearfix;}
+
+/*position*/
+.p-r{position: relative;}
+.p-a{position: absolute;}
+
+/*color*/
+.color-main{ color: $color-main;}
+
+/*tetx-algin*/
+.tetx-center{text-align: center;}
+.tetx-left{text-align: left;}
+.tetx-right{text-align: right;}
+
+/*common-ui*/
+.select-car-btn{
   display: inline-block;
-  width: 44px;
-  height: 44px;
+  width: 240px;
+  height: 84px;
   border-radius: 100px;
+  line-height: 84px;
+  text-align: center;
+  color: white;
   background-color: $color-main;
-  background-repeat: no-repeat;
-
-}
-
-.icon-help {
-  background-image: url("~@/assets/images/icon/icon-help.png");
-}
-
-.icon-search {
-  background-image: url("~@/assets/images/icon/icon-search.png");
-}
-
-.icon-location {
-  background-image: url("~@/assets/images/icon/icon-location.png");
-}
-
-.icon-user {
-  background-image: url("~@/assets/images/icon/icon-user.png");
+  font-size: 26px;
+  font-weight: 300;
+  margin: 0 17px;
 }

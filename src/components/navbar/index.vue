@@ -31,17 +31,4 @@ export  default {
     cursor: pointer;
   }
 }
-.select-car-btn{
-  display: inline-block;
-  width: 240px;
-  height: 84px;
-  border-radius: 100px;
-  line-height: 84px;
-  text-align: center;
-  color: white;
-  background-color: $color-main;
-  font-size: 26px;
-  font-weight: 300;
-  margin: 0 17px;
-}
 </style>
